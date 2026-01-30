@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/redesign-overrides.css">
 
 	
 	<!-- Google Tag Manager -->
@@ -85,16 +86,20 @@
 
 	<!-- start banner Area -->
 	<section class="home-banner-area">
+		<div class="banner-background"></div> <!-- Container for GSAP Animation -->
 		<div class="container">
-			<div class="row fullscreen d-flex align-items-center">
-				<div class="banner-content col-lg-6 col-md-12 justify-content-center ">
-					<div class="me wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.2s">Hello People!</div>
-					<h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">Alan A. Haro</h1>
-					<div class="designation mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.1s">
-						I am an
-						<span class="designer">Engineer</span>
-						that can solve
-						<span class="developer">Problems</span>
+			<div class="row fullscreen d-flex align-items-center justify-content-center">
+				<div class="banner-content col-lg-10 col-md-12 justify-content-center text-center">
+					<div class="me">Hello People!</div>
+					<h1>
+						<span class="intro-text">My name is</span>
+						<span class="name-highlight">Andres Haro</span>
+					</h1>
+					<div class="designation mb-50">
+						Building
+						<span class="designer">Digital</span>
+						Experiences that
+						<span class="developer">Matter</span>
 					</div>
 					<a href="mailto:hvaandres@uxdeveloper.dev" target="_blank" class="primary-btn" data-text="Hire Me">
 						<span>H</span>
@@ -106,9 +111,6 @@
 						<span>e</span>
 					</a>
 				</div>
-				<div class="banner-img col-lg-6 col-md-6 align-self-end">
-					<img class="img-fluid" src="#" alt="">
-				</div>
 			</div>
 		</div>
 	</section>
@@ -119,27 +121,25 @@
 	<section class="brands-area">
 		<div class="container">
 			<div class="brand-wrap">
-				<div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-					<div class="col single-brand">
-						<a href="https://www.uvu.edu/education/"><img class="mx-auto" src="img/brand/b1.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="https://www.yournextfence.com/"><img class="mx-auto" src="img/brand/b2.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="https://www.superlumin.com/"><img class="mx-auto" src="img/brand/b3.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="https://eltapatio.netlify.app/"><img class="mx-auto" src="img/brand/b4.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="https://cofffee.netlify.app/"><img class="mx-auto" src="img/brand/b5.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="https://cofffee.netlify.app/"><img class="mx-auto" src="img/brand/b6.svg" alt="" width="20px" height="20px"></a>
-					</div>
-					<div class="col single-brand">
-						<a href="https://cofffee.netlify.app/"><img class="mx-auto" src="img/brand/b7.png" alt="" width="20px" height="20px"></a>
+				<div class="marquee-wrapper">
+					<div class="marquee-content">
+						<!-- Original Logos -->
+						<div class="brand-item"><img src="img/brand/b1.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b2.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b3.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b4.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b5.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b6.svg" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b7.png" alt=""></div>
+						
+						<!-- Duplicate for Infinite Scroll -->
+						<div class="brand-item"><img src="img/brand/b1.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b2.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b3.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b4.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b5.png" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b6.svg" alt=""></div>
+						<div class="brand-item"><img src="img/brand/b7.png" alt=""></div>
 					</div>
 				</div>
 			</div>
@@ -163,8 +163,60 @@
 						<p>
 							I am an Engineer with a passion for UX, Development, Automation & IT with the intention of creating new, and innovating ideas to solve common problems. I love being involved in the problem to be part of the solution. My specialty is finding the best solution for the end-user with the right software and the right tools.
 						</p>
-				
 					</div>
+					
+					<!-- Stats Cards -->
+					<div class="stats-container">
+						<div class="stat-card">
+							<div class="stat-number">5+</div>
+							<div class="stat-label">Years Experience</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-number">50+</div>
+							<div class="stat-label">Projects Completed</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-number">15+</div>
+							<div class="stat-label">Happy Clients</div>
+						</div>
+					</div>
+					
+					<!-- Skills Grid -->
+					<div class="skills-grid">
+						<div class="skill-item">
+							<i class="fa fa-code"></i>
+							<span>HTML/CSS</span>
+						</div>
+						<div class="skill-item">
+							<i class="fa fa-js"></i>
+							<span>JavaScript</span>
+						</div>
+						<div class="skill-item">
+							<i class="fab fa-react"></i>
+							<span>React</span>
+						</div>
+						<div class="skill-item">
+							<i class="fab fa-python"></i>
+							<span>Python</span>
+						</div>
+						<div class="skill-item">
+							<i class="fa fa-server"></i>
+							<span>DevOps</span>
+						</div>
+						<div class="skill-item">
+							<i class="fab fa-aws"></i>
+							<span>AWS/Azure</span>
+						</div>
+						<div class="skill-item">
+							<i class="fab fa-docker"></i>
+							<span>Docker</span>
+						</div>
+						<div class="skill-item">
+							<i class="fab fa-git-alt"></i>
+							<span>Git</span>
+						</div>
+					</div>
+					<br>
 					<a href="https://github.com/hvaandres" class="primary-btn" data-text="GitHub">
 						<span>G</span>
 						<span>i</span>
@@ -224,6 +276,16 @@
 							<div class="middle">
 								<h4>Medical Assistant Website</h4>
 								<div class="cat">Salud y Figura</div>
+								<div class="project-tags">
+									<span class="project-tag">HTML/CSS</span>
+									<span class="project-tag">JavaScript</span>
+									<span class="project-tag">Responsive</span>
+								</div>
+								<div class="project-actions">
+									<a href="https://saludyfigura.mx/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> Live Demo
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://saludyfigura.mx/"></a>
 						</div>
@@ -237,6 +299,11 @@
 							<div class="middle">
 								<h4>Restaurant Website</h4>
 								<div class="cat">Irashai</div>
+								<div class="project-actions">
+									<a href="https://irasshai.us/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Project
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://irasshai.us/"></a>
 						</div>
@@ -250,6 +317,11 @@
 							<div class="middle">
 								<h4>E-commerce</h4>
 								<div class="cat"> FDS Company</div>
+								<div class="project-actions">
+									<a href="https://www.trexfencingfds.com/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Project
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://www.trexfencingfds.com/"></a>
 						</div>
@@ -263,6 +335,11 @@
 							<div class="middle">
 								<h4>Multicultural Website</h4>
 								<div class="cat">UVU | Project</div>
+								<div class="project-actions">
+									<a href="https://www.uvu.edu/multicultural/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Project
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://www.uvu.edu/multicultural/"></a>
 						</div>
@@ -276,6 +353,11 @@
 							<div class="middle">
 								<h4>Education Website</h4>
 								<div class="cat">UVU | Project</div>
+								<div class="project-actions">
+									<a href="https://www.uvu.edu/education/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Project
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://www.uvu.edu/education/"></a>
 						</div>
@@ -289,6 +371,11 @@
 							<div class="middle">
 								<h4>Blog - React App</h4>
 								<div class="cat">We can build and write a blog</div>
+								<div class="project-actions">
+									<a href="https://github.com/hvaandres/AAH-react-portfolio" target="_blank" class="project-btn">
+										<i class="fa fa-github"></i> View Code
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://github.com/hvaandres/AAH-react-portfolio"></a>
 						</div>
@@ -302,6 +389,11 @@
 							<div class="middle">
 								<h4>Linkedin Bot </h4>
 								<div class="cat">The easiest way to apply for a job</div>
+								<div class="project-actions">
+									<a href="https://github.com/hvaandres/Job_Hunter_Bot_LinkedIn" target="_blank" class="project-btn">
+										<i class="fa fa-github"></i> View Code
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://github.com/hvaandres/Job_Hunter_Bot_LinkedIn"></a>
 						</div>
@@ -315,6 +407,11 @@
 							<div class="middle">
 								<h4> Creating a Rest-API </h4>
 								<div class="cat">Let's build a database with Nodejs and Mongo-DB</div>
+								<div class="project-actions">
+									<a href="https://github.com/hvaandres/RESTful_API_Mongodb_Express" target="_blank" class="project-btn">
+										<i class="fa fa-github"></i> View Code
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://github.com/hvaandres/RESTful_API_Mongodb_Express"></a>
 						</div>
@@ -328,6 +425,11 @@
 							<div class="middle">
 								<h4>To-Do List</h4>
 								<div class="cat">Let's build our reminder for our tasks with React</div>
+								<div class="project-actions">
+									<a href="https://ah-todolist.netlify.app/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View App
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://ah-todolist.netlify.app/"></a>
 						</div>
@@ -342,6 +444,11 @@
 							<div class="middle">
 								<h4>E-comerce shopping cart </h4>
 								<div class="cat">Let's build a cart with some real items with react and commercejs</div>
+								<div class="project-actions">
+									<a href="https://ah-ecommerce.netlify.app" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View App
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://ah-ecommerce.netlify.app"></a>
 						</div>
@@ -355,6 +462,11 @@
 							<div class="middle">
 								<h4> Car-Shop Website </h4>
 								<div class="cat">Let's build a website for a small business</div>
+								<div class="project-actions">
+									<a href="https://luxclubworx.netlify.app/" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Site
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://luxclubworx.netlify.app/"></a>
 						</div>
@@ -368,6 +480,11 @@
 							<div class="middle">
 								<h4>Cypress Automation</h4>
 								<div class="cat">Let's create a project and some test scenarios and make sure it passed the test inside of the pipeline</div>
+								<div class="project-actions">
+									<a href="https://github.com/hvaandres/Cypress_Testing_Reports/actions" target="_blank" class="project-btn">
+										<i class="fa fa-github"></i> View Repo
+									</a>
+								</div>
 							</div>
 							<a class="overlay" href="https://github.com/hvaandres/Cypress_Testing_Reports/actions"></a>
 						</div>
@@ -411,6 +528,14 @@
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
 							Building infrastructure as code to maintain all the cloud services that are being used by the Software Architects and Software Engineers.
+							<div class="job-skills">
+								<span class="job-skill-tag">AWS</span>
+								<span class="job-skill-tag">Terraform</span>
+								<span class="job-skill-tag">Docker</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">CI/CD</span>
+								<span class="job-skill-tag">Python</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -711,17 +836,20 @@
 			<div class="row mt-80">
 				<div class="col-lg-4 col-md-4">
 					<div class="contact-box">
-						<h4>+1(385)505-2608</h4>
+						<i class="fa fa-phone"></i>
+						<div class="contact-text-wrap">
+							<span class="contact-label">Call Us</span>
+							<h4>+1(385)505-2608</h4>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="contact-box">
-						<h4>hvaandres@uxdeveloper.dev</h4>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4">
-					<div class="contact-box">
-						<h4>aharo.netlify.com</h4>
+						<i class="fa fa-envelope"></i>
+						<div class="contact-text-wrap">
+							<span class="contact-label">Email Us</span>
+							<h4>hvaandres@uxdeveloper.dev</h4>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -805,6 +933,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/mail-script.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
+	
+	<!-- GSAP Animation Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+	
+	<!-- Modern Theme & Animations -->
+	<script src="js/theme-toggle.js"></script>
+	<script src="js/animations.js"></script>
 </body>
 
 </html>

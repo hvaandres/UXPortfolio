@@ -1,0 +1,1392 @@
+/* ==========================================================================
+   REDESIGN OVERRIDES - CLEAN & CONSISTENT
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. GLOBAL THEME OVERRIDES (Remove Aqua)
+   -------------------------------------------------------------------------- */
+::selection {
+    background: #4F46E5;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #4F46E5;
+    color: #fff;
+}
+
+a:hover, a:focus {
+    color: #4F46E5;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Override Main CSS Aqua Buttons globally */
+.primary-btn {
+    background: #4F46E5 !important;
+    border: 1px solid transparent !important;
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.primary-btn:hover {
+    background: #4338ca !important;
+    border: 1px solid transparent !important;
+    color: #fff !important;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+/* Remove the specific aqua border/color on hover defined in main.css */
+.primary-btn:hover,
+.primary-btn:focus,
+.btn:focus,
+.btn:hover {
+    border-color: transparent !important;
+    color: #fff !important;
+}
+
+/* Override section titles accents */
+.section-title h2:before {
+    background: #4F46E5 !important;
+}
+
+.section-title h2:after {
+    background: #4F46E5 !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. NAVIGATION - MODERN STYLE (iOS Liquid Glass)
+   -------------------------------------------------------------------------- */
+#header {
+    transition: all 0.4s ease;
+    padding: 20px 0;
+}
+
+/* Glassmorphism Sticky Header */
+#header.header-scrolled {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px); /* Stronger blur for iOS feel */
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#nav-menu-container {
+    float: none !important;
+    margin-left: auto !important; /* Pushes menu to the right in flex container */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Ensure menu hides on mobile to show hamburger instead */
+@media (max-width: 800px) {
+    #nav-menu-container {
+        display: none !important;
+    }
+}
+
+/* Override list item spacing - Compact */
+.nav-menu > li {
+    float: none !important;
+    display: inline-block !important;
+    margin-left: 5px !important; /* Tight spacing like segmented control */
+    margin-right: 0 !important;
+}
+
+/* Modern iOS-Style Menu Items */
+.nav-menu a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    padding: 6px 14px; /* Slightly smaller */
+    border-radius: 20px; /* Round Pill */
+    margin: 0;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Springy iOS ease */
+    background: rgba(255, 255, 255, 0.05); /* Slight glass base */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Remove old underline */
+.nav-menu a::after {
+    display: none;
+}
+
+/* Liquid Glass Hover Effect */
+.nav-menu a:hover,
+.nav-menu li.menu-active a,
+.nav-menu a.active {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.2); /* Glass pill */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Subtle pop */
+}
+
+/* Sticky Header Text Colors - Adaptation */
+#header.header-scrolled .nav-menu a {
+    color: #4b5563 !important; /* Gray-600 */
+    text-shadow: none;
+}
+
+#header.header-scrolled .nav-menu a:hover,
+#header.header-scrolled .nav-menu li.menu-active a,
+#header.header-scrolled .nav-menu a.active {
+    color: #4F46E5 !important;
+    background: rgba(79, 70, 229, 0.1); /* Light purple tint pill */
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Button-style "My Resume" Link - Unified Style */
+.nav-menu li:last-child a {
+    background: #4F46E5;
+    color: #fff !important;
+    margin-left: 10px;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+    border: none;
+}
+
+.nav-menu li:last-child a:hover {
+    background: #4338ca;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Sticky Header Button Style */
+#header.header-scrolled .nav-menu li:last-child a {
+    background: #4F46E5;
+    color: #fff !important;
+}
+
+.service-area .col-lg-3.col-md-6:nth-child(1) .single-service,
+.service-area .col-lg-3.col-md-6:nth-child(2) .single-service,
+.service-area .col-lg-3.col-md-6:nth-child(3) .single-service,
+.service-area .col-lg-3.col-md-6:nth-child(4) .single-service {
+    background: #ffffff !important; /* Force white background for cards */
+}
+
+/* Fix Contact Area Color */
+.contact-area {
+    background: #4F46E5 !important;
+}
+.home-banner-area {
+    background: #0f172a; /* Dark base */
+    background-image: none !important; /* Ensure no static image */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+/* Container for GSAP generated background elements */
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 100%);
+}
+
+.banner-background .floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(40px);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center !important;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.banner-content h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.banner-content .intro-text {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.banner-content .name-highlight {
+    display: block;
+    font-size: 90px; /* Massive Name */
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: transparent;
+    background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .banner-content .name-highlight {
+        font-size: 50px;
+    }
+    .banner-content .intro-text {
+        font-size: 20px;
+    }
+}
+
+.banner-content .me {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 24px 24px 24px 4px; /* Asymmetrical message bubble */
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Add a glowing gradient border effect using ::before */
+.banner-content .me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px 24px 24px 4px;
+    padding: 2px; /* Border width */
+    background: linear-gradient(45deg, #4F46E5, #ec4899);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Hover effect */
+.banner-content .me:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.banner-content .me::after {
+    display: none; /* Remove speech bubble triangle */
+}
+
+/* Designation Text */
+.banner-content .designation {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    max-width: 100% !important; /* Remove original width restriction */
+    width: 100%;
+    text-align: center;
+}
+
+.banner-content .designer {
+    color: #fff;
+    font-weight: 800;
+    background: none;
+    -webkit-text-fill-color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.banner-content .developer {
+    color: #fff;
+    font-weight: 800;
+}
+
+/* Hire Me Button - White Version */
+.banner-content .primary-btn {
+    background: #FFFFFF !important;
+    color: #4F46E5 !important;
+    padding: 15px 50px;
+    font-size: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.banner-content .primary-btn span {
+    color: #4F46E5 !important;
+    font-weight: 800;
+}
+
+.banner-content .primary-btn:hover {
+    background: #f0f0f0 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Hide old image classes */
+.banner-img {
+    display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. JOB HISTORY SECTION - CENTER TIMELINE SPLIT (Restored)
+   -------------------------------------------------------------------------- */
+.job-area {
+    background: #f8fafc;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Timeline vertical center line */
+.job-area .container {
+    position: relative;
+}
+
+.job-area .container::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    bottom: 50px;
+    left: 50%; /* Center the line */
+    width: 2px;
+    background: rgba(79, 70, 229, 0.2);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.job-area .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+
+/* Base Column Style - Split Left/Right */
+.job-area .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 50%; /* Half width */
+    padding: 0;
+    position: relative;
+    margin-bottom: 0px; 
+    clear: both;
+}
+
+/* Left Side (Odd Items) */
+.job-area .col-lg-6:nth-child(odd) {
+    margin-right: auto; 
+    margin-left: 0;
+    padding-right: 50px; 
+    text-align: right; 
+}
+
+/* Right Side (Even Items) */
+.job-area .col-lg-6:nth-child(even) {
+    margin-left: auto; 
+    margin-right: 0;
+    padding-left: 50px; 
+    text-align: left; 
+}
+
+/* Timeline Dots */
+.job-area .col-lg-6::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 5px solid #4F46E5;
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.job-area .col-lg-6:nth-child(odd)::after { right: -10px; }
+.job-area .col-lg-6:nth-child(even)::after { left: -10px; }
+
+.job-area .col-lg-6:hover::after {
+    background: #4F46E5;
+    transform: scale(1.3);
+    box-shadow: 0 0 0 8px rgba(79, 70, 229, 0.2);
+}
+
+/* Card Style */
+.single-job {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 30px; /* Reduced spacing */
+}
+
+/* Gradient Top Border */
+.single-job::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; 
+    background: linear-gradient(90deg, #4F46E5, #ec4899);
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+/* FORCE NO AQUA BACKGROUND ON HOVER */
+.single-job:hover {
+    background-color: #ffffff !important; /* Force white */
+    background: #ffffff !important;
+    transform: translateY(-5px) translateX(10px);
+    box-shadow: 0 25px 50px rgba(79, 70, 229, 0.15) !important;
+    color: inherit !important;
+    border-color: rgba(0,0,0,0.03) !important;
+}
+
+/* Force Hover Lift Directions (Override general hover) */
+.job-area .col-lg-6:nth-child(odd) .single-job:hover {
+    transform: translateY(-5px) translateX(-5px);
+}
+
+.job-area .col-lg-6:nth-child(even) .single-job:hover {
+    transform: translateY(-5px) translateX(5px);
+}
+
+/* Ensure inner text does not turn white/aqua */
+.single-job:hover h4,
+.single-job:hover .top-left h4 {
+    color: #111827 !important;
+}
+
+.single-job:hover p,
+.single-job:hover .top-left p,
+.single-job:hover .bottom-sec {
+    color: #6b7280 !important;
+}
+
+/* Ensure button inside does not get aqua border */
+.single-job:hover .primary-btn {
+    border-color: rgba(79, 70, 229, 0.1) !important;
+    background: rgba(79, 70, 229, 0.08) !important;
+    color: #4F46E5 !important;
+}
+
+.single-job:hover .primary-btn span {
+    color: #4F46E5 !important;
+}
+
+.single-job:hover::before {
+    transform: scaleX(1);
+}
+
+/* Header Alignment */
+.single-job .top-sec {
+    margin-bottom: 15px;
+    align-items: center;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 15px;
+    gap: 10px;
+    flex-direction: row; 
+}
+
+.job-area .col-lg-6:nth-child(odd) .single-job .top-sec {
+    flex-direction: row-reverse;
+}
+
+.single-job .top-left h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 2px;
+}
+
+/* FORCE NO COLOR CHANGE ON HOVER */
+.single-job:hover .top-left h4 {
+    color: #111827 !important; 
+}
+
+.single-job .top-left p {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Responsive Reset */
+@media (max-width: 991px) {
+    .job-area .container::before {
+        left: 30px; 
+        transform: none;
+    }
+    
+    .job-area .col-lg-6 {
+        max-width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left !important;
+        margin-bottom: 40px;
+    }
+    
+    .job-area .col-lg-6:nth-child(odd),
+    .job-area .col-lg-6:nth-child(even) {
+        margin: 0;
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    .job-area .col-lg-6::after,
+    .job-area .col-lg-6:nth-child(odd)::after,
+    .job-area .col-lg-6:nth-child(even)::after {
+        left: 21px; 
+        right: auto;
+    }
+    
+    .job-area .col-lg-6:nth-child(odd) .single-job .top-sec {
+        flex-direction: row;
+    }
+    
+    .job-area .col-lg-6:nth-child(odd) .single-job:hover,
+    .job-area .col-lg-6:nth-child(even) .single-job:hover {
+        transform: translateY(-5px) translateX(5px);
+    }
+}
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    /* Reset Dots to Left */
+    .job-area .col-lg-6::after,
+    .job-area .col-lg-6:nth-child(odd)::after,
+    .job-area .col-lg-6:nth-child(even)::after {
+        left: 21px; /* Center on line at 30px */
+        right: auto;
+    }
+    
+    /* Reset Flex Direction */
+    .job-area .col-lg-6:nth-child(odd) .single-job .top-sec {
+        flex-direction: row;
+    }
+    
+    /* Reset Hover movement */
+    .job-area .col-lg-6:nth-child(odd) .single-job:hover,
+    .job-area .col-lg-6:nth-child(even) .single-job:hover {
+        transform: translateY(-5px) translateX(5px);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   7. ABOUT SECTION STATS
+   -------------------------------------------------------------------------- */
+.brand-wrap {
+    background: transparent;
+    box-shadow: none;
+    z-index: 10 !important;
+    position: relative;
+    padding: 20px 0;
+    margin-top: -50px; /* Overlap hero slightly */
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    /* Gradient Masks for smooth edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move half way (since duplicate) */
+}
+
+.brand-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 100px;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.brand-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.15);
+    border-color: #4F46E5;
+}
+
+.brand-item img {
+    max-height: 50px !important;
+    max-width: 80%;
+    width: auto !important;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+
+.brand-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------------------
+   4. PROJECTS SECTION (Mimicking Freelance/Services)
+   -------------------------------------------------------------------------- */
+.work-area {
+    background: #ffffff;
+    padding-top: 100px;
+}
+
+/* Hide original image/overlay elements */
+.single-work .thumb,
+.single-work .overlay {
+    display: none !important;
+}
+
+/* Style the container to match .single-service */
+.single-work .relative {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.single-work:hover .relative {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.15);
+    border-color: #4F46E5;
+}
+
+/* Reset inner content positioning */
+.single-work .middle {
+    position: static !important;
+    opacity: 1 !important;
+    transform: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+/* Add Icons matching Freelance style */
+.single-work .middle::before {
+    font-family: 'Linearicons-Free';
+    font-size: 40px;
+    color: #4F46E5;
+    display: block;
+    margin-bottom: 25px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    background: rgba(79, 70, 229, 0.1); /* Circle background */
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Specific Icons based on classes */
+.single-work.web-design .middle::before { content: "\e81e"; } /* Screen */
+.single-work.branding .middle::before { content: "\e866"; }   /* Tag */
+.single-work.creative .middle::before { content: "\e801"; }   /* Star */
+/* Default fallback */
+.single-work .middle::before { content: "\e838"; }            /* Laptop */
+
+.single-work .middle h4 {
+    color: #222 !important;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.single-work .middle .cat {
+    color: #666 !important;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    min-height: 40px; /* Align buttons */
+}
+
+/* Action Buttons */
+.project-actions {
+    margin-top: auto;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #fff;
+    color: #222 !important;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.project-btn:hover {
+    background: #4F46E5;
+    color: #fff !important;
+    border-color: #4F46E5;
+}
+
+/* Tags */
+.project-tags {
+    display: none; /* Cleaner look, optional */
+}
+
+/* Disable click hijacking */
+.single-work > a.overlay {
+    display: none; 
+}
+
+/* --------------------------------------------------------------------------
+   5. FREELANCE WORK / SERVICES - MODERN REFRESH
+   -------------------------------------------------------------------------- */
+.service-area {
+    background: #f8fafc; /* Light gray/blue tint */
+    position: relative;
+    z-index: 1;
+}
+
+.single-service {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Align text left for better reading */
+}
+
+.single-service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Top border accent */
+    background: linear-gradient(90deg, #4F46E5, #ec4899);
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.single-service:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(79, 70, 229, 0.15);
+}
+
+.single-service:hover::before {
+    transform: scaleX(1);
+}
+
+/* Icon Styling - Floating Circle */
+.single-service .lnr {
+    font-size: 32px;
+    color: #fff;
+    background: linear-gradient(135deg, #4F46E5, #7C3AED);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    transition: all 0.4s ease;
+    -webkit-text-fill-color: initial; /* Reset generic gradient text */
+}
+
+.single-service:hover .lnr {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4);
+}
+
+/* Text Styling */
+.single-service h4 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #111827;
+    letter-spacing: -0.5px;
+}
+
+.single-service h4 span {
+    color: #4F46E5;
+    display: inline !important; /* Ensure it stays inline */
+}
+
+.single-service p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    flex-wrap: nowrap; /* Force single row on desktop */
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    clear: both;
+    align-items: stretch; /* Ensure equal height */
+}
+
+/* Allow wrap on mobile */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-wrap: wrap;
+    }
+}
+
+.stat-card {
+    flex: 1 1 0px; /* Force equal width distribution */
+    width: 0; /* Necessary for flex equality */
+    min-width: 150px; /* Minimum viable width */
+    text-align: center;
+    padding: 25px 15px; /* Consistent padding */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+    border-color: #4F46E5;
+}
+
+.stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4F46E5;
+    margin-bottom: 5px;
+    line-height: 1; /* Tight line height */
+    margin-top: 0;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    line-height: 1.2; /* Consistent line height */
+    margin: 0;
+}
+
+/* Skills Grid Style Enhancement */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f9f9ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    border: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.skill-item i {
+    color: #4F46E5;
+}
+
+.skill-item:hover {
+    background: #4F46E5;
+    color: #fff;
+    border-color: #4F46E5;
+}
+
+.skill-item:hover i {
+    color: #fff;
+}
+/* --------------------------------------------------------------------------
+   8. TESTIMONIALS / REVIEWS - MINIMALIST STYLE
+   -------------------------------------------------------------------------- */
+.testimonials_area {
+    background: #f9f9ff;
+    padding: 120px 0;
+    position: relative;
+}
+
+/* Remove Background Decoration */
+.testimonials_area::before {
+    display: none;
+}
+
+.testi_slider {
+    padding: 0;
+}
+
+.testi_item {
+    background: transparent; /* No card background */
+    padding: 20px;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none; /* No shadow */
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    
+    /* CRITICAL: Force Visibility */
+    opacity: 1 !important; 
+    visibility: visible !important;
+    transform: none !important;
+    display: block !important;
+}
+
+/* Ensure Carousel Items are visible */
+.owl-item, .owl-item.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.testi_item:hover {
+    transform: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* Quote Icon - Stylized */
+.testi_item img {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 auto 30px auto;
+    opacity: 1;
+    filter: none;
+}
+
+/* Review Text - Big & Bold */
+.testi_item p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #111827; /* Dark text */
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Reviewer Name */
+.testi_item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4F46E5; /* Purple highlight */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Star Rating - Clean Row */
+.testi_item .list {
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.testi_item .list li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.testi_item .list li a {
+    color: #FBBF24; /* Amber */
+    font-size: 14px;
+}
+
+.testi_item .list li a:hover {
+    transform: none;
+}
+
+/* Slider Dots - Minimal Line - STRICT OVERRIDE */
+.owl-theme .owl-dots .owl-dot span {
+    width: 40px;
+    height: 3px; /* Line style */
+    margin: 5px 5px;
+    background: #d1d5db !important; /* Default Gray */
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #4F46E5 !important; /* Active Purple */
+    width: 60px;
+}
+
+/* --------------------------------------------------------------------------
+   9. FORCED OWL CAROUSEL OVERRIDES (Kill Aqua)
+   -------------------------------------------------------------------------- */
+.testimonials_area .owl-controls .owl-dots .owl-dot,
+.testimonials_area .owl-dots .owl-dot,
+.owl-theme .owl-controls .owl-dots .owl-dot {
+    background: transparent !important; /* Reset wrapper */
+}
+
+/* Target the span or the dot itself */
+.testimonials_area .owl-controls .owl-dots .owl-dot span,
+.testimonials_area .owl-dots .owl-dot span,
+.owl-theme .owl-dots .owl-dot span {
+    background: #d1d5db !important; /* Default Gray */
+}
+
+/* Active State */
+.testimonials_area .owl-controls .owl-dots .owl-dot.active span,
+.testimonials_area .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot.active span,
+.testimonials_area .owl-controls .owl-dots .owl-dot:hover span {
+    background: #4F46E5 !important; /* Theme Purple */
+}
+
+/* Explicitly hide or recolor any potential legacy bars */
+.testimonials_area .owl-controls .owl-nav .owl-prev,
+.testimonials_area .owl-controls .owl-nav .owl-next {
+    color: #111827 !important; /* Arrows to dark */
+}
+
+.testimonials_area .owl-controls .owl-nav .owl-prev:hover,
+.testimonials_area .owl-controls .owl-nav .owl-next:hover {
+    color: #4F46E5 !important; /* Hover to purple */
+}
+
+/* --------------------------------------------------------------------------
+   11. MOBILE MENU TOGGLE - PURPLE THEME
+   -------------------------------------------------------------------------- */
+#mobile-nav-toggle {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 8px 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#mobile-nav-toggle i {
+    color: #4F46E5 !important;
+    font-size: 24px;
+}
+.contact-area {
+    background: #ffffff !important;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-title h2 {
+    color: #111827 !important; /* Dark text matching other sections */
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.contact-title p {
+    color: #6b7280 !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Container */
+.contact-area .row.mt-80 {
+    margin-top: 20px !important;
+    justify-content: center;
+    gap: 25px; /* Compact gap */
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+}
+
+/* Modern Clean Card - Horizontal Layout */
+.contact-box {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0;
+    
+    /* Horizontal Layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Top Gradient Accent */
+.contact-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; 
+    background: linear-gradient(90deg, #4F46E5, #ec4899);
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.contact-box:hover {
+    background: #ffffff;
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(79, 70, 229, 0.15);
+}
+
+.contact-box:hover::before {
+    transform: scaleX(1);
+}
+
+/* Icon Styling - Exact Match to Freelance (Restored) */
+.contact-box i {
+    display: inline-block !important;
+    text-align: center;
+    font-size: 32px !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #4F46E5, #7C3AED) !important;
+    width: 70px !important;
+    height: 70px !important;
+    line-height: 70px !important;
+    border-radius: 50%;
+    margin: 0 25px 0 0 !important;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3) !important;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+    
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    vertical-align: middle !important;
+}
+
+.contact-box i::before {
+    display: inline-block !important;
+    margin: 0 !important;
+    line-height: 70px !important;
+    font-size: 32px !important;
+    color: #ffffff !important;
+}
+
+/* Fix Globe Icon Size (Relative) */
+.contact-box .fa-globe::before {
+    font-size: 36px !important;
+    line-height: 70px !important;
+}
+
+.contact-box:hover i {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4) !important;
+}
+}
+
+.contact-box:hover i {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4) !important;
+    background: linear-gradient(135deg, #4F46E5, #7C3AED) !important; /* Keep gradient */
+    color: #fff !important; /* Keep white icon */
+}
+
+/* Text Wrapper */
+.contact-text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Label Styling */
+.contact-label {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+/* Value Styling */
+.contact-box h4 {
+    color: #111827 !important;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 0;
+    position: static;
+    white-space: normal;
+    word-break: break-word; /* Prevent overflow */
+}
+
+.contact-box:hover h4 {
+    color: #4F46E5 !important; /* Highlight text on hover */
+}
+
+/* Responsive adjustment */
+.contact-area .col-lg-4 {
+    margin-bottom: 20px;
+    flex: 0 0 auto;
+    width: auto;
+}
+.contact-area .primary-btn:hover {
+    background: #4338ca !important; /* Darker purple */
+    color: #ffffff !important;
+}
+
+/* Fix "Hire Me" Button - Remove double text */
+.primary-btn {
+    background: #4F46E5 !important;
+    border: none !important;
+    line-height: 42px;
+    padding: 0 30px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+/* Hide the pseudo-element causing overlap */
+.primary-btn::before {
+    display: none !important;
+    content: none !important;
+}
+
+.primary-btn span {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static !important;
+    transform: none !important;
+    padding: 0 !important;
+}
+
+.primary-btn:hover {
+    background: #4338ca !important; /* Darker purple on hover */
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.primary-btn:hover span {
+    color: #fff !important;
+}
+
+/* Inverse button for contact area (Restored Style) */
+.contact-area .primary-btn {
+    background: #fff !important; /* White default */
+    border: 1px solid #fff !important;
+}
+
+.contact-area .primary-btn span {
+    color: #4F46E5 !important; /* Purple text default */
+}
+
+/* Hover State - Transparent bg, Purple text */
+.contact-area .primary-btn:hover {
+    background: transparent !important;
+    border-color: #4F46E5 !important; /* Purple border */
+}
+
+.contact-area .primary-btn:hover span {
+    color: #4F46E5 !important; /* Keep text Purple on hover */
+}
