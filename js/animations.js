@@ -532,19 +532,13 @@ document.addEventListener('DOMContentLoaded', function() {
      ============================================ */
   
   function initContactAnimations() {
-    // Animate contact items - Elastic Pop Up
-    gsap.from('.contact-box i', {
-      scrollTrigger: {
-        trigger: '.contact-area',
-        start: 'top 80%',
-      },
-      scale: 0,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 1.2,
-      ease: 'elastic.out(1, 0.5)'
-    });
-    
+    // Note: an elastic scale(0) -> scale(1) pop-in was tried here for the
+    // contact icons, but GSAP's transform scale reliably got stuck at 0 on
+    // this element (opacity finished animating, scale never did), leaving
+    // the icons permanently invisible. Removed rather than ship a coin-flip
+    // animation - the icons are simply visible by default now, with the
+    // existing CSS hover treatment for interactivity.
+
     // Animate text below icons
     gsap.from('.contact-box h4', {
       scrollTrigger: {
@@ -570,20 +564,13 @@ document.addEventListener('DOMContentLoaded', function() {
   function initStatCounterAnimations() {
     const statsSection = document.querySelector('.stats-container');
     if (!statsSection) return;
-    
-    // Animated entry for cards
-    gsap.from('.stat-card', {
-      scrollTrigger: {
-        trigger: '.stats-container',
-        start: 'top 85%',
-        toggleActions: 'play none none reverse'
-      },
-      y: 30, // Reduced from 60 to prevent overlap
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'back.out(1.7)'
-    });
+
+    // Note: a y:30 -> 0 entry animation used to live here, gated on the same
+    // scrollTrigger("play ... reverse") pattern that left the contact icons
+    // and skill cards stuck invisible elsewhere in this file. Here it left a
+    // stuck `transform: translate(0, 30px)` inline style on .stat-card,
+    // which broke the vertical centering of the stat numbers/labels. Removed -
+    // the cards are simply visible by default now.
 
     // Animated numbers
     const stats = document.querySelectorAll('.stat-number');
@@ -696,7 +683,16 @@ document.addEventListener('DOMContentLoaded', function() {
       ScrollTrigger.refresh();
     }, 250);
   });
-  
+
+  // Trigger positions are calculated at DOMContentLoaded, before images
+  // (about illustration, brand logos, etc.) finish loading and shift the
+  // layout below them. Without this, later one-shot ScrollTriggers - like
+  // the contact icon pop-in - can end up with stale start positions and
+  // never fire, leaving elements stuck at their "from" (invisible) state.
+  window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+  });
+
 });
 
 /* ============================================

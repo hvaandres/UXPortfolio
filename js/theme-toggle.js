@@ -23,22 +23,14 @@
   // Apply theme to document
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    
-    // Update toggle button icon
+
+    // Drive the sliding thumb + a11y state off aria-checked - no icon swapping needed,
+    // both the sun and moon icons live in the track permanently.
     const themeToggle = document.querySelector('.theme-toggle');
     if (themeToggle) {
-      const icon = themeToggle.querySelector('i');
-      if (icon) {
-        if (theme === DARK_THEME) {
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
-        } else {
-          icon.classList.remove('fa-sun');
-          icon.classList.add('fa-moon');
-        }
-      }
+      themeToggle.setAttribute('aria-checked', theme === DARK_THEME ? 'true' : 'false');
     }
-    
+
     // Dispatch custom event for other scripts to listen to
     window.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
   }
@@ -60,24 +52,30 @@
     }, 300);
   }
   
-  // Create theme toggle button if it doesn't exist
+  // Create theme toggle switch if it doesn't exist
   function createToggleButton() {
     // Check if button already exists
     if (document.querySelector('.theme-toggle')) {
       return;
     }
-    
+
     const button = document.createElement('button');
     button.className = 'theme-toggle';
+    button.type = 'button';
+    button.setAttribute('role', 'switch');
+    button.setAttribute('aria-checked', 'false');
     button.setAttribute('aria-label', 'Toggle dark mode');
     button.setAttribute('title', 'Toggle theme');
-    
-    const icon = document.createElement('i');
-    icon.className = 'fa fa-moon';
-    
-    button.appendChild(icon);
+
+    button.innerHTML =
+      '<span class="theme-toggle-track">' +
+        '<i class="fa fa-sun-o theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true"></i>' +
+        '<i class="fa fa-moon-o theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true"></i>' +
+        '<span class="theme-toggle-thumb"></span>' +
+      '</span>';
+
     document.body.appendChild(button);
-    
+
     // Add click event listener
     button.addEventListener('click', toggleTheme);
     

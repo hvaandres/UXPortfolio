@@ -82,9 +82,7 @@ $(document).ready(function () {
             var $grid = $(".grid").isotope({
                 itemSelector: ".all",
                 percentPosition: true,
-                masonry: {
-                    columnWidth: ".all"
-                }
+                layoutMode: "fitRows"
             })
         };
     });

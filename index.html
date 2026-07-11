@@ -69,13 +69,12 @@
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class=""><a class="active" href="index.html">Home</a></li>
-						<li><a href="https://www.youtube.com/channel/UCgWt5jQo5OLyMdlR0FbSmEQ">Youtube</a></li>
-						<li><a href="https://github.com/hvaandres">Github</a></li>
 						<li><a href="https://calendly.com/madebyuxdev">Chats 1:1</a></li>
-						<li><a href="https://unsplash.com/@hvaandres">Happy Snapper</a></li>
-						<li><a href="https://www.buymeacoffee.com/hvaandres">Buy Me A Coffee</a></li>
+						<li class="nav-icon-item"><a href="https://www.youtube.com/channel/UCgWt5jQo5OLyMdlR0FbSmEQ" title="YouTube" aria-label="YouTube"><i class="fa fa-youtube-play"></i><span class="nav-icon-label">Youtube</span></a></li>
+						<li class="nav-icon-item"><a href="https://github.com/hvaandres" title="GitHub" aria-label="GitHub"><i class="fa fa-github"></i><span class="nav-icon-label">Github</span></a></li>
+						<li class="nav-icon-item"><a href="https://unsplash.com/@hvaandres" title="Photography" aria-label="Photography"><i class="fa fa-camera"></i><span class="nav-icon-label">Photography</span></a></li>
+						<li class="nav-icon-item"><a href="https://www.buymeacoffee.com/hvaandres" title="Buy Me A Coffee" aria-label="Buy Me A Coffee"><i class="fa fa-coffee"></i><span class="nav-icon-label">Buy Me A Coffee</span></a></li>
 						<li><a href="./img/Alan's_Resume.pdf">My Resume</a></li>
-						
 					</ul>
 				</nav>
 			</div>
@@ -153,86 +152,99 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
 				<div class="col-lg-6 about-left">
-					<img class="img-fluid" src="img/about-img.png" alt="">
+					<div class="about-portrait-wrap">
+						<img class="img-fluid" src="img/about-img-indigo.png" alt="Andres Haro">
+						<div class="availability-badge">
+							<span class="availability-dot"></span>
+							Available for select projects
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-5 col-md-12 about-right">
 					<div class="section-title">
-						<h2>about myself</h2>
+						<h2>About Myself</h2>
 					</div>
-					<div class="mb-50 wow fadeIn" data-wow-duration=".8s">
+
+					<div class="about-bio-card wow fadeIn" data-wow-duration=".8s">
 						<p>
-							I am an Engineer with a passion for UX, Development, Automation & IT with the intention of creating new, and innovating ideas to solve common problems. I love being involved in the problem to be part of the solution. My specialty is finding the best solution for the end-user with the right software and the right tools.
+							Senior DevOps & Security Engineer with 10+ years of experience designing secure, automated, and scalable cloud infrastructure across Azure, AWS, and GCP. Specialized in DevSecOps, SRE, MLOps automation, and cloud security engineering. Expert in Terraform, Kubernetes, CI/CD, Python, policy-as-code, and observability, with deep experience in SIEM/SOAR, EDR, threat detection, API security, and penetration testing.
+I build systems that are secure by default, automated end-to-end, and resilient at scale.
 						</p>
 					</div>
-					
-					<!-- Stats Cards -->
+
+					<!-- Stats Strip -->
 					<div class="stats-container">
 						<div class="stat-card">
-							<div class="stat-number">5+</div>
+							<div class="stat-number">10+</div>
 							<div class="stat-label">Years Experience</div>
 						</div>
 						<div class="stat-card">
-							<div class="stat-number">50+</div>
+							<div class="stat-number">250+</div>
 							<div class="stat-label">Projects Completed</div>
 						</div>
 						<div class="stat-card">
-							<div class="stat-number">15+</div>
+							<div class="stat-number">35+</div>
 							<div class="stat-label">Happy Clients</div>
 						</div>
 					</div>
-					
-					<!-- Skills Grid -->
-					<div class="skills-grid">
-						<div class="skill-item">
-							<i class="fa fa-code"></i>
-							<span>HTML/CSS</span>
-						</div>
-						<div class="skill-item">
-							<i class="fa fa-js"></i>
-							<span>JavaScript</span>
-						</div>
-						<div class="skill-item">
-							<i class="fab fa-react"></i>
-							<span>React</span>
-						</div>
-						<div class="skill-item">
-							<i class="fab fa-python"></i>
-							<span>Python</span>
-						</div>
-						<div class="skill-item">
-							<i class="fa fa-server"></i>
-							<span>DevOps</span>
-						</div>
-						<div class="skill-item">
-							<i class="fab fa-aws"></i>
-							<span>AWS/Azure</span>
-						</div>
-						<div class="skill-item">
-							<i class="fab fa-docker"></i>
-							<span>Docker</span>
-						</div>
-						<div class="skill-item">
-							<i class="fab fa-git-alt"></i>
-							<span>Git</span>
+
+					<!-- Skills Card -->
+					<div class="about-skills-card">
+						<h5 class="about-skills-title">Core Skills</h5>
+						<div class="skills-grid">
+							<div class="skill-item">
+								<i class="fa fa-code"></i>
+								<span>DevOps</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-shield"></i>
+								<span>DevSecOps</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-flask"></i>
+								<span>MLOps</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-magic"></i>
+								<span>AI Engineer</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-server"></i>
+								<span>Infrastructure as Code</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-cloud"></i>
+								<span>Cloud Engineer</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-cubes"></i>
+								<span>Kubernetes</span>
+							</div>
+							<div class="skill-item">
+								<i class="fa fa-lock"></i>
+								<span>Cybersecurity</span>
+							</div>
 						</div>
 					</div>
-					<br>
-					<a href="https://github.com/hvaandres" class="primary-btn" data-text="GitHub">
-						<span>G</span>
-						<span>i</span>
-						<span>t</span>
-						<span>H</span>
-						<span>u</span>
-						<span>b</span>
-					</a>
-					<a href="./img/Alan's_Resume.pdf" class="primary-btn" data-text="Resume">
-						<span>R</span>
-						<span>e</span>
-						<span>s</span>
-						<span>u</span>
-						<span>m</span>
-						<span>e</span>
-					</a>
+
+					<div class="about-cta-row">
+						<a href="https://github.com/hvaandres" class="primary-btn" data-text="GitHub">
+							<span>G</span>
+							<span>i</span>
+							<span>t</span>
+							<span>H</span>
+							<span>u</span>
+							<span>b</span>
+						</a>
+						<a href="./img/Alan's_Resume.pdf" class="primary-btn" data-text="Resume">
+							<span>R</span>
+							<span>e</span>
+							<span>s</span>
+							<span>u</span>
+							<span>m</span>
+							<span>e</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -514,8 +526,8 @@
 					<div class="single-job">
 						<div class="top-sec d-flex justify-content-between">
 							<div class="top-left">
-								<h4>DevOps Engineer</h4>
-								<p>Datashield, Utah</p>
+								<h4>Senior Security Software Engineer</h4>
+								<p>Remote, Utah</p>
 							</div>
 							<div class="top-right">
 								<a href="#" class="primary-btn" data-text="Current">
@@ -527,9 +539,9 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							Building infrastructure as code to maintain all the cloud services that are being used by the Software Architects and Software Engineers.
+							<p class="job-desc">Building infrastructure as code to maintain all the cloud services that are being used by the Software Architects and Software Engineers.</p>
 							<div class="job-skills">
-								<span class="job-skill-tag">AWS</span>
+								<span class="job-skill-tag">Azure Policy</span>
 								<span class="job-skill-tag">Terraform</span>
 								<span class="job-skill-tag">Docker</span>
 								<span class="job-skill-tag">Kubernetes</span>
@@ -557,7 +569,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							Building and Mentoring a new community of New Engineers.
+							<p class="job-desc">Building and Mentoring a new community of New Engineers.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -580,7 +593,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							Mentoring new students to get skills as a DevOps Egineer & Cloud Engineer.
+							<p class="job-desc">Mentoring new students to get skills as a DevOps Egineer & Cloud Engineer.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -604,7 +618,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							Building new startegies to develop scenarios for automation within web apps and salesforce.
+							<p class="job-desc">Building new startegies to develop scenarios for automation within web apps and salesforce.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -627,7 +642,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							Solely Responsible for designing and implementing solutions for building new Websites, Data Analysis, and Marketing Tools.
+							<p class="job-desc">Solely Responsible for designing and implementing solutions for building new Websites, Data Analysis, and Marketing Tools.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -650,7 +666,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-							Helping end-users to understand the importance of Cybersecurity terminology and to help them to understand why is important to have CA, SSL, and some other ways to keep secure their Data.
+							<p class="job-desc">Helping end-users to understand the importance of Cybersecurity terminology and to help them to understand why is important to have CA, SSL, and some other ways to keep secure their Data.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -672,8 +689,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
-							I lead a team to maintain the internal style guide & implement new design patterns on web & mobile. Also, I’m currently designing new templates that will help the department to promote their future events.
-						
+							<p class="job-desc">I lead a team to maintain the internal style guide & implement new design patterns on web & mobile. Also, I'm currently designing new templates that will help the department to promote their future events.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -695,8 +712,8 @@
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-							I develop scripts, execute, and maintain automation framework using Python, Selenium WebDriver.
-							In charge of Building & Maintaining my testing machines to make sure I have test scenarios in multiple platforms like Windows, Mac OS & Linux environments.
+							<p class="job-desc">I develop scripts, execute, and maintain automation framework using Python, Selenium WebDriver. In charge of Building &amp; Maintaining my testing machines to make sure I have test scenarios in multiple platforms like Windows, Mac OS &amp; Linux environments.</p>
+							<div class="job-skills"></div>
 						</div>
 					</div>
 				</div>
@@ -760,58 +777,47 @@
 	<!-- Start Testimonials Area -->
 	<section class="testimonials_area section-gap">
 		<div class="container">
-			<div class="testi_slider owl-carousel">
-				<div class="item">
-					<div class="testi_item">
-						<img src="img/quote.png" alt="">
-						<h4>Dara Snow</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								Working with him is pretty fun since he is very creative and he is very well-orginized  <br> He will always offer multiple approaches and possible solutions.
-							</p>
+			<div class="section-title text-center">
+				<h2>What People Say</h2>
+				<p>Kind words from people I've had the chance to work with</p>
+			</div>
+			<div class="testi_grid">
+				<div class="testi_item wow fadeInUp" data-wow-duration="1s">
+					<i class="fa fa-quote-left testi-quote-icon"></i>
+					<p>Working with him is pretty fun since he is very creative and he is very well-orginized. He will always offer multiple approaches and possible solutions.</p>
+					<div class="testi_footer">
+						<span class="testi_avatar">DS</span>
+						<div class="testi_meta">
+							<h4>Dara Snow</h4>
+							<div class="testi_stars">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item">
-					<div class="testi_item">
-						<img src="img/quote.png" alt="">
-						<h4>Cristina Vazquez</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								I'm happy with the work that he has done at Monalisah <br> He is capable of designing and develop any idea & He is always capable to learn and trying new things.
-							</p>
+				<div class="testi_item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+					<i class="fa fa-quote-left testi-quote-icon"></i>
+					<p>I'm happy with the work that he has done at Monalisah. He is capable of designing and develop any idea & he is always capable to learn and trying new things.</p>
+					<div class="testi_footer">
+						<span class="testi_avatar">CV</span>
+						<div class="testi_meta">
+							<h4>Cristina Vazquez</h4>
+							<div class="testi_stars">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="item">
-					<div class="testi_item">
-						<img src="img/quote.png" alt="">
-						<h4>Daniel Esparza</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								Alan provides strong evidence of low-fidelity and high-fidelity design concepts <br> and He always initiates and execute creative ideas such as new User Experiences concepts for our products & Services.
-							</p>
+				<div class="testi_item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+					<i class="fa fa-quote-left testi-quote-icon"></i>
+					<p>Alan provides strong evidence of low-fidelity and high-fidelity design concepts, and he always initiates and executes creative ideas such as new user experience concepts for our products & services.</p>
+					<div class="testi_footer">
+						<span class="testi_avatar">DE</span>
+						<div class="testi_meta">
+							<h4>Daniel Esparza</h4>
+							<div class="testi_stars">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -827,6 +833,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="contact-title">
+						<span class="contact-eyebrow">Let's Talk</span>
 						<h2>Contact Me</h2>
 						<p>Please let me know if you have any questions or concerns and I would be more than happy to help you</p>
 					</div>
@@ -853,7 +860,6 @@
 					</div>
 				</div>
 			</div>
-			<br>
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<a  href="mailto:hvaandres@icloud.com" target="_blank" class="primary-btn" data-text="Hire Me">
@@ -942,6 +948,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Modern Theme & Animations -->
 	<script src="js/theme-toggle.js"></script>
 	<script src="js/animations.js"></script>
+	<script src="js/phase2-interactions.js"></script>
 </body>
 
 </html>

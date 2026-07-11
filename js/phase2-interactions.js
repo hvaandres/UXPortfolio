@@ -177,56 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ============================================
      Skills Grid Stagger Animation
      ============================================ */
-  
+
   function initSkillsAnimation() {
-    const skills = document.querySelectorAll('.skill-item');
-    
-    if (skills.length === 0 || typeof gsap === 'undefined') return;
-    
-    gsap.from(skills, {
-      scrollTrigger: {
-        trigger: '.skills-grid',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse'
-      },
-      scale: 0,
-      opacity: 0,
-      duration: 0.4,
-      stagger: 0.08,
-      ease: 'back.out(1.5)'
-    });
-  }
-  
-  /* ============================================
-     Job History Skills Tags
-     ============================================ */
-  
-  function enhanceJobCards() {
-    const jobs = document.querySelectorAll('.single-job');
-    
-    jobs.forEach((job, index) => {
-      // Add subtle pulse animation on hover
-      job.addEventListener('mouseenter', function() {
-        const dot = this.querySelector('::before');
-        if (typeof gsap !== 'undefined') {
-          gsap.to(this, {
-            scale: 1.02,
-            duration: 0.3,
-            ease: 'power2.out'
-          });
-        }
-      });
-      
-      job.addEventListener('mouseleave', function() {
-        if (typeof gsap !== 'undefined') {
-          gsap.to(this, {
-            scale: 1,
-            duration: 0.3,
-            ease: 'power2.out'
-          });
-        }
-      });
-    });
+    // Removed: this used the same scale(0) + scrollTrigger("play ... reverse")
+    // pattern that left the contact icons permanently invisible - scrolling
+    // past the trigger and back (or an instant jump like an anchor link)
+    // could leave items stuck mid-stagger at scale 0. The skill cards are
+    // simply visible by default now, with the existing CSS hover treatment.
   }
   
   /* ============================================
@@ -269,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const filters = document.querySelectorAll('.filters ul li');
     
     filters.forEach(filter => {
-      filter.addEventListener('click', function() {
+      filter.addEventListener('click', function(event) {
         // Add ripple effect
         createRipple(this, event);
         
@@ -343,7 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
     enhanceProjectCards();
     animateStatCounters();
     initSkillsAnimation();
-    enhanceJobCards();
     enhanceSocialIcons();
     enhanceFilters();
     enhanceTestimonials();
