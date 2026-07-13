@@ -43,10 +43,48 @@ $(document).ready(function () {
         $('select').niceSelect();
     };
 
-    //------- Pre Loader --------//  
-    $(window).on('load', function () {
-        $(".preloader-area").delay(200).fadeOut(500);
-    })
+    //------- Pre Loader --------//
+    // The Pac-Man train loops continuously (attract mode) while the page
+    // loads. Once loading finishes, wait for the train to actually reach
+    // the right edge (end of its current lap) before revealing the page,
+    // so it always looks like "Pac-Man got there, then the site loaded."
+    (function () {
+        var preloader = document.getElementById("preloader");
+        var train = document.getElementById("pacmanTrain");
+        if (!preloader || !train) {
+            return;
+        }
+
+        var pageLoaded = false;
+        var leaving = false;
+
+        function leave() {
+            if (leaving) {
+                return;
+            }
+            leaving = true;
+            preloader.classList.add("is-leaving");
+            setTimeout(function () {
+                preloader.style.display = "none";
+            }, 600);
+        }
+
+        $(window).on("load", function () {
+            pageLoaded = true;
+        });
+
+        train.addEventListener("animationiteration", function () {
+            if (pageLoaded) {
+                leave();
+            }
+        });
+
+        // Fallback in case the animation is disabled (e.g. reduced-motion
+        // settings) or the iteration event never fires for any reason.
+        $(window).on("load", function () {
+            setTimeout(leave, 4000);
+        });
+    })();
 
     //------- Lightbox  js --------//  
     $('.img-gal').magnificPopup({

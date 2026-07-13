@@ -15,6 +15,156 @@
     color: #fff;
 }
 
+/* --------------------------------------------------------------------------
+   0b. PRELOADER - PAC-MAN CHASING GHOSTS
+   -------------------------------------------------------------------------- */
+.preloader-area {
+    background: #0f172a !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    overflow: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader-area.is-leaving {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pacman-track {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-image: repeating-linear-gradient(
+        to right,
+        #334155 0, #334155 6px, transparent 6px, transparent 26px
+    );
+    background-position: center;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+}
+
+/* Travels well past both edges of the viewport (vw units, not % of its
+   own small width) so it fully exits before looping back to the left. */
+.pacman-train {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-25vw, -50%);
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    animation: train-run 3.2s linear infinite;
+}
+
+.preloader-area.is-leaving .pacman-train {
+    animation: none;
+    transform: translate(105vw, -50%);
+}
+
+@keyframes train-run {
+    0%        { transform: translate(-25vw, -50%); }
+    92%, 100% { transform: translate(105vw, -50%); }
+}
+
+/* Pac-Man: classic CSS border-trick wedge circle */
+.pacman {
+    width: 0;
+    height: 0;
+    border: 20px solid #FFD400;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: chomp 0.35s linear infinite;
+}
+
+@keyframes chomp {
+    0%, 100% { border-right-color: transparent; }
+    50% { border-right-color: #FFD400; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pacman-train {
+        animation: none;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+    .pacman {
+        animation: none;
+        border-right-color: #FFD400;
+    }
+}
+
+.ghost {
+    position: relative;
+    width: 34px;
+    height: 30px;
+    border-radius: 17px 17px 0 0;
+}
+
+.ghost::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    background: inherit;
+    clip-path: polygon(
+        0 0, 8% 100%, 17% 0, 25% 100%, 33% 0, 42% 100%,
+        50% 0, 58% 100%, 67% 0, 75% 100%, 83% 0, 92% 100%, 100% 0
+    );
+}
+
+.ghost .eyes {
+    position: absolute;
+    top: 9px;
+    left: 5px;
+    display: flex;
+    gap: 6px;
+}
+
+.ghost .eye {
+    width: 9px;
+    height: 11px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ghost .eye::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #1e293b;
+    border-radius: 50%;
+    top: 4px;
+    right: 1px;
+}
+
+.ghost-red { background: #FF3B3B; }
+.ghost-pink { background: #FFB8DE; }
+.ghost-cyan { background: #4DE8FF; }
+.ghost-orange { background: #FFA945; }
+
+.preloader-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    animation: preloader-text-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes preloader-text-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
 a:hover, a:focus {
     color: #4F46E5;
     text-decoration: none;
@@ -204,10 +354,7 @@ a:hover, a:focus {
     }
 }
 
-.service-area .col-lg-3.col-md-6:nth-child(1) .single-service,
-.service-area .col-lg-3.col-md-6:nth-child(2) .single-service,
-.service-area .col-lg-3.col-md-6:nth-child(3) .single-service,
-.service-area .col-lg-3.col-md-6:nth-child(4) .single-service {
+.service-area .single-service {
     background: #ffffff !important; /* Force white background for cards */
 }
 
@@ -740,6 +887,28 @@ a:hover, a:focus {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
+.freelance-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 18px 0 20px;
+    padding: 12px 22px;
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .freelance-badge {
+    background: #131829;
+    color: #f1f2f6;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
 [data-theme="dark"] .about-portrait-wrap::before {
     background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, rgba(124, 58, 237, 0.45) 55%, transparent 72%);
 }
@@ -879,12 +1048,14 @@ a:hover, a:focus {
     text-align: center;
 }
 
-/* Specific Icons based on classes */
-.single-work.web-design .middle::before { content: "\e81e"; } /* Screen */
-.single-work.branding .middle::before { content: "\e866"; }   /* Tag */
-.single-work.creative .middle::before { content: "\e801"; }   /* Star */
+/* Specific Icons based on classes (later rules win when a card has two tags) */
+.single-work.branding .middle::before { content: "\e82f"; }   /* Tag */
+.single-work.blog .middle::before { content: "\e802"; }       /* Pencil */
+.single-work.automation .middle::before { content: "\e810"; } /* Cog */
+.single-work.apps .middle::before { content: "\e83a"; }       /* Smartphone */
+.single-work.security .middle::before { content: "\e80f"; }   /* Lock */
 /* Default fallback */
-.single-work .middle::before { content: "\e838"; }            /* Laptop */
+.single-work .middle::before { content: "\e83c"; }            /* Laptop */
 
 .single-work .middle h4 {
     color: #222 !important;
@@ -953,6 +1124,10 @@ a:hover, a:focus {
     background: #f8fafc; /* Light gray/blue tint */
     position: relative;
     z-index: 1;
+}
+
+.service-area .row > [class*="col-"] {
+    margin-bottom: 30px;
 }
 
 .single-service {
@@ -1034,6 +1209,17 @@ a:hover, a:focus {
     margin-bottom: 0;
     font-size: 15px;
 }
+
+/* Highlight the Security service as the primary focus */
+.single-service-featured {
+    border: 1px solid rgba(79, 70, 229, 0.35);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.15);
+}
+
+.single-service-featured::before {
+    transform: scaleX(1);
+}
+
 .about-bio-card {
     background: #ffffff;
     border-radius: 20px;

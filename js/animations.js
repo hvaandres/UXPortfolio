@@ -499,25 +499,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   /* ============================================
-     Page Load Animation
-     ============================================ */
-  
-  function initPageLoadAnimation() {
-    // Fade out preloader with GSAP
-    const preloader = document.querySelector('.preloader-area');
-    if (preloader) {
-      gsap.to(preloader, {
-        opacity: 0,
-        duration: 0.5,
-        delay: 0.5,
-        onComplete: () => {
-          preloader.style.display = 'none';
-        }
-      });
-    }
-  }
-  
-  /* ============================================
      Testimonial Slider Enhancement
      ============================================ */
   
@@ -653,7 +634,6 @@ document.addEventListener('DOMContentLoaded', function() {
      ============================================ */
   
   function initAllAnimations() {
-    initPageLoadAnimation();
     initHeroAnimations();
     initBackgroundAnimation(); // Add background animation start
     initTypingAnimation();

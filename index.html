@@ -9,13 +9,29 @@
 	<!-- Author Meta -->
 	<meta name="author" content="Alan Andres Haro">
 	<!-- Meta Description -->
-	<meta name="description" content="Porfolio">
+	<meta name="description" content="Alan Andres Haro — Senior DevOps &amp; Security Engineer specializing in cloud infrastructure, DevSecOps, AI/ML security, and penetration testing. View my projects and experience, or reach out for contract and freelance work.">
 	<!-- Meta Keyword -->
 	<meta name="keywords" content="portfolio, alan andres haro, alan haro, alan haro portfolio, webdesigner, software engineer, content creator, alan andres haro content creator, alan andres haro web designer, web designer utah, software developer utah">
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
 	<title>Alan A. Haro</title>
+
+	<!-- Open Graph / Link Previews -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://aharo.dev/">
+	<meta property="og:site_name" content="Alan A. Haro">
+	<meta property="og:title" content="Alan A. Haro — DevOps & Security Engineer">
+	<meta property="og:description" content="Senior DevOps & Security Engineer specializing in cloud infrastructure, DevSecOps, AI/ML security, and penetration testing. Open for contract and freelance work.">
+	<meta property="og:image" content="https://aharo.dev/img/about-img-indigo.png">
+	<meta property="og:image:width" content="491">
+	<meta property="og:image:height" content="706">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Alan A. Haro — DevOps & Security Engineer">
+	<meta name="twitter:description" content="Senior DevOps & Security Engineer specializing in cloud infrastructure, DevSecOps, AI/ML security, and penetration testing. Open for contract and freelance work.">
+	<meta name="twitter:image" content="https://aharo.dev/img/about-img-indigo.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
@@ -51,10 +67,17 @@
 	<!-- End Google Tag Manager (noscript) -->
 
 	<!-- Start Preloader Area -->
-	<div class="preloader-area">
-		<div class="loader-box">
-			<div class="loader"></div>
+	<div class="preloader-area" id="preloader">
+		<div class="pacman-track">
+			<div class="pacman-train" id="pacmanTrain">
+				<div class="pacman"></div>
+				<div class="ghost ghost-red"><div class="eyes"><div class="eye"></div><div class="eye"></div></div></div>
+				<div class="ghost ghost-pink"><div class="eyes"><div class="eye"></div><div class="eye"></div></div></div>
+				<div class="ghost ghost-cyan"><div class="eyes"><div class="eye"></div><div class="eye"></div></div></div>
+				<div class="ghost ghost-orange"><div class="eyes"><div class="eye"></div><div class="eye"></div></div></div>
+			</div>
 		</div>
+		<div class="preloader-text">AH</div>
 	</div>
 	<!-- End Preloader Area -->
 
@@ -74,7 +97,7 @@
 						<li class="nav-icon-item"><a href="https://github.com/hvaandres" title="GitHub" aria-label="GitHub"><i class="fa fa-github"></i><span class="nav-icon-label">Github</span></a></li>
 						<li class="nav-icon-item"><a href="https://unsplash.com/@hvaandres" title="Photography" aria-label="Photography"><i class="fa fa-camera"></i><span class="nav-icon-label">Photography</span></a></li>
 						<li class="nav-icon-item"><a href="https://www.buymeacoffee.com/hvaandres" title="Buy Me A Coffee" aria-label="Buy Me A Coffee"><i class="fa fa-coffee"></i><span class="nav-icon-label">Buy Me A Coffee</span></a></li>
-						<li><a href="./img/Alan's_Resume.pdf">My Resume</a></li>
+						<li><a href="./img/Andres's_Resume.pdf">My Resume</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -100,7 +123,7 @@
 						Experiences that
 						<span class="developer">Matter</span>
 					</div>
-					<a href="mailto:hvaandres@uxdeveloper.dev" target="_blank" class="primary-btn" data-text="Hire Me">
+					<a href="mailto:hello@aharo.dev" target="_blank" class="primary-btn" data-text="Hire Me">
 						<span>H</span>
 						<span>i</span>
 						<span>r</span>
@@ -179,11 +202,11 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							<div class="stat-label">Years Experience</div>
 						</div>
 						<div class="stat-card">
-							<div class="stat-number">250+</div>
+							<div class="stat-number">350+</div>
 							<div class="stat-label">Projects Completed</div>
 						</div>
 						<div class="stat-card">
-							<div class="stat-number">35+</div>
+							<div class="stat-number">50+</div>
 							<div class="stat-label">Happy Clients</div>
 						</div>
 					</div>
@@ -259,7 +282,7 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 				<div class="col-lg-6">
 					<div class="section-title">
 						<h2>Latest Work</h2>
-						<p>I'm currently working as a DevOps & Site Relability Engineer where I'm developing new startegies to build Infrstructure as Code, Building CI/CD Pipelines, Automation Scripts and many more task</p>
+						<p>I'm currently working as a DevOps & Site Reliability Engineer, specializing in Infrastructure as Code (IaC), CI/CD, AI, MLOps, automation, and cloud security. My expertise includes penetration testing, threat hunting, security automation, and building scalable, secure, and reliable infrastructure.</p>
 						<br>
 						<p>Please click and check my projects:</p>
 					</div>
@@ -269,9 +292,11 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 					<div class="filters">
 						<ul>
 							<li class="active" data-filter=".all">All Categories</li>
+							<li data-filter=".automation">Automation</li>
+							<li data-filter=".security">Security</li>
 							<li data-filter=".branding">Branding</li>
-							<li data-filter=".creative">Creative Work</li>
-							<li data-filter=".web-design">Web Design</li>
+							<li data-filter=".blog">Blog</li>
+							<li data-filter=".apps">Apps</li>
 						</ul>
 					</div>
 				</div>
@@ -279,12 +304,8 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 
 			<div class="filters-content">
 				<div class="row grid">
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all creative wow fadeInUp" data-wow-duration="2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/1.png" alt="">
-							</div>
 							<div class="middle">
 								<h4>Medical Assistant Website</h4>
 								<div class="cat">Salud y Figura</div>
@@ -302,30 +323,22 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							<a class="overlay" href="https://saludyfigura.mx/"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all web-design branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/3.png" alt="">
-							</div>
 							<div class="middle">
 								<h4>Restaurant Website</h4>
 								<div class="cat">Irashai</div>
 								<div class="project-actions">
-									<a href="https://irasshai.us/" target="_blank" class="project-btn">
+									<a href="https://irasshai.netlify.app/" target="_blank" class="project-btn">
 										<i class="fa fa-external-link"></i> View Project
 									</a>
 								</div>
 							</div>
-							<a class="overlay" href="https://irasshai.us/"></a>
+							<a class="overlay" href="https://irasshai.netlify.app/"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding web-design wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/4.png" alt="">
-							</div>
 							<div class="middle">
 								<h4>E-commerce</h4>
 								<div class="cat"> FDS Company</div>
@@ -338,30 +351,22 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							<a class="overlay" href="https://www.trexfencingfds.com/"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all web-design wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all apps wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/5.png" alt="">
-							</div>
 							<div class="middle">
-								<h4>Multicultural Website</h4>
-								<div class="cat">UVU | Project</div>
+								<h4>Starving Shopping List</h4>
+								<div class="cat">iOS App</div>
 								<div class="project-actions">
-									<a href="https://www.uvu.edu/multicultural/" target="_blank" class="project-btn">
-										<i class="fa fa-external-link"></i> View Project
+									<a href="https://apps.apple.com/us/app/starving-shopping-list/id6742771179" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View on App Store
 									</a>
 								</div>
 							</div>
-							<a class="overlay" href="https://www.uvu.edu/multicultural/"></a>
+							<a class="overlay" href="https://apps.apple.com/us/app/starving-shopping-list/id6742771179"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all creative wow fadeInUp" data-wow-duration="2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/6.png" alt="">
-							</div>
 							<div class="middle">
 								<h4>Education Website</h4>
 								<div class="cat">UVU | Project</div>
@@ -374,48 +379,39 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							<a class="overlay" href="https://www.uvu.edu/education/"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all automation blog wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/7.png" alt="">
-							</div>
 							<div class="middle">
-								<h4>Blog - React App</h4>
-								<div class="cat">We can build and write a blog</div>
+								<h4>To-Do List Kubernetes</h4>
+								<div class="cat">Deploying a Node.js To-Do List app on Minikube</div>
 								<div class="project-actions">
-									<a href="https://github.com/hvaandres/AAH-react-portfolio" target="_blank" class="project-btn">
-										<i class="fa fa-github"></i> View Code
+									<a href="https://github.com/hvaandres/TodoList-Kubernetes-Deployment" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Code
+									</a>
+									<a href="https://medium.com/the-last/deploying-a-nodejs-todo-list-application-on-minikube-with-docker-as-a-container-registry-e0e4e34172d9" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> Read Docs
 									</a>
 								</div>
 							</div>
-							<a class="overlay" href="https://github.com/hvaandres/AAH-react-portfolio"></a>
+							<a class="overlay" href="https://github.com/hvaandres/TodoList-Kubernetes-Deployment"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all web-design wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all automation security wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/8.png" alt="">
-							</div>
 							<div class="middle">
-								<h4>Linkedin Bot </h4>
-								<div class="cat">The easiest way to apply for a job</div>
+								<h4>PcapAnalyzer</h4>
+								<div class="cat">A toolkit for analyzing network packet capture files</div>
 								<div class="project-actions">
-									<a href="https://github.com/hvaandres/Job_Hunter_Bot_LinkedIn" target="_blank" class="project-btn">
-										<i class="fa fa-github"></i> View Code
+									<a href="https://github.com/hvaandres/PcapAnalyzer" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Code
 									</a>
 								</div>
 							</div>
-							<a class="overlay" href="https://github.com/hvaandres/Job_Hunter_Bot_LinkedIn"></a>
+							<a class="overlay" href="https://github.com/hvaandres/PcapAnalyzer"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all creative wow fadeInUp" data-wow-duration="2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all automation wow fadeInUp" data-wow-duration="2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/9.png" alt="">
-							</div>
 							<div class="middle">
 								<h4> Creating a Rest-API </h4>
 								<div class="cat">Let's build a database with Nodejs and Mongo-DB</div>
@@ -428,12 +424,8 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							<a class="overlay" href="https://github.com/hvaandres/RESTful_API_Mongodb_Express"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all apps wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/10.png" alt="">
-							</div>
 							<div class="middle">
 								<h4>To-Do List</h4>
 								<div class="cat">Let's build our reminder for our tasks with React</div>
@@ -447,48 +439,36 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 						</div>
 					</div>
 
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all web-design wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/11.png" alt="">
-							</div>
 							<div class="middle">
-								<h4>E-comerce shopping cart </h4>
-								<div class="cat">Let's build a cart with some real items with react and commercejs</div>
+								<h4>ArmourCoatingsLLC</h4>
+								<div class="cat">Web development, photography & video for a local business</div>
 								<div class="project-actions">
-									<a href="https://ah-ecommerce.netlify.app" target="_blank" class="project-btn">
-										<i class="fa fa-external-link"></i> View App
-									</a>
-								</div>
-							</div>
-							<a class="overlay" href="https://ah-ecommerce.netlify.app"></a>
-						</div>
-					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all creative wow fadeInUp" data-wow-duration="2s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/12.png" alt="">
-							</div>
-							<div class="middle">
-								<h4> Car-Shop Website </h4>
-								<div class="cat">Let's build a website for a small business</div>
-								<div class="project-actions">
-									<a href="https://luxclubworx.netlify.app/" target="_blank" class="project-btn">
+									<a href="https://armourcoatingsllc.com" target="_blank" class="project-btn">
 										<i class="fa fa-external-link"></i> View Site
 									</a>
 								</div>
 							</div>
-							<a class="overlay" href="https://luxclubworx.netlify.app/"></a>
+							<a class="overlay" href="https://armourcoatingsllc.com"></a>
 						</div>
 					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s">
 						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="./img/UX/Projects/13.png" alt="">
+							<div class="middle">
+								<h4>Geyserpainting</h4>
+								<div class="cat">Web development, photography & video for a local business</div>
+								<div class="project-actions">
+									<a href="https://geyserpainting.com" target="_blank" class="project-btn">
+										<i class="fa fa-external-link"></i> View Site
+									</a>
+								</div>
 							</div>
+							<a class="overlay" href="https://geyserpainting.com"></a>
+						</div>
+					</div>
+					<div class="single-work col-lg-4 col-md-6 col-sm-12 all automation wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+						<div class="relative">
 							<div class="middle">
 								<h4>Cypress Automation</h4>
 								<div class="cat">Let's create a project and some test scenarios and make sure it passed the test inside of the pipeline</div>
@@ -526,27 +506,90 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 					<div class="single-job">
 						<div class="top-sec d-flex justify-content-between">
 							<div class="top-left">
-								<h4>Senior Security Software Engineer</h4>
-								<p>Remote, Utah</p>
+								<h4>Senior Data & Cybersecurity Engineer, Team Lead</h4>
+								<p>Intermountain Health, Utah</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Current">
-									<span>A</span><span>u</span><span>g</span>
-									<span>'</span><span>2</span><span>1</span>
+								<a href="#" class="primary-btn" data-text="Oct'24toPresent">
+									<span>O</span><span>c</span><span>t</span>
+									<span>'</span><span>2</span><span>4</span>
 									<span>t</span><span>o</span>
 									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
 								</a>
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							<p class="job-desc">Building infrastructure as code to maintain all the cloud services that are being used by the Software Architects and Software Engineers.</p>
+							<p class="job-desc">Partner with 10,000+ developers to ship AI and ML workloads securely in a HIPAA/HITRUST environment, building reusable Terraform modules that bake IAM, RBAC, and Azure Policy guardrails into every deployment.</p>
 							<div class="job-skills">
-								<span class="job-skill-tag">Azure Policy</span>
-								<span class="job-skill-tag">Terraform</span>
-								<span class="job-skill-tag">Docker</span>
+								<span class="job-skill-tag">Azure</span>
 								<span class="job-skill-tag">Kubernetes</span>
-								<span class="job-skill-tag">CI/CD</span>
-								<span class="job-skill-tag">Python</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Security</span>
+								<span class="job-skill-tag">Pen Test</span>
+								<span class="job-skill-tag">IAM</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="single-job">
+						<div class="top-sec d-flex justify-content-between">
+							<div class="top-left">
+								<h4>Senior DevOps & DevSecOps Engineer</h4>
+								<p>TherapyNotes, Utah</p>
+							</div>
+							<div class="top-right">
+								<a href="#" class="primary-btn" data-text="May'23toOct'24">
+									<span>M</span><span>a</span><span>y</span>
+									<span>'</span><span>2</span><span>3</span>
+									<span>t</span><span>o</span>
+									<span>O</span><span>c</span><span>t</span>
+									<span>'</span><span>2</span><span>4</span>
+								</a>
+							</div>
+						</div>
+						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
+							<p class="job-desc">Designed secure, cloud-native data pipelines and governed Postgres, Elastic, and BigQuery services, building monitoring and alerting to keep production data trustworthy.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Security</span>
+								<span class="job-skill-tag">Postgres</span>
+								<span class="job-skill-tag">BigQuery</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-6">
+					<div class="single-job">
+						<div class="top-sec d-flex justify-content-between">
+							<div class="top-left">
+								<h4>Senior Security Software Engineer, Team Lead</h4>
+								<p>Lumifi Cyber, Utah</p>
+							</div>
+							<div class="top-right">
+								<a href="#" class="primary-btn" data-text="Jul'22toAug'23">
+									<span>J</span><span>u</span><span>l</span>
+									<span>'</span><span>2</span><span>2</span>
+									<span>t</span><span>o</span>
+									<span>A</span><span>u</span><span>g</span>
+									<span>'</span><span>2</span><span>3</span>
+								</a>
+							</div>
+						</div>
+						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
+							<p class="job-desc">Engineered secure SDLC and DevSecOps pipelines, led penetration testing and API security assessments, and deployed SOC 2-aligned services in Azure aligned with NIST and ISO 27001.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Security</span>
+								<span class="job-skill-tag">Pen Test</span>
+								<span class="job-skill-tag">API Security</span>
 							</div>
 						</div>
 					</div>
@@ -560,7 +603,7 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 								<p>Google Developer Program, Utah</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Current">
+								<a href="#" class="primary-btn" data-text="Mar'21toPresent">
 									<span>M</span><span>a</span><span>r</span>
 									<span>'</span><span>2</span><span>1</span>
 									<span>t</span><span>o</span>
@@ -569,11 +612,18 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							<p class="job-desc">Building and Mentoring a new community of New Engineers.</p>
-							<div class="job-skills"></div>
+							<p class="job-desc">Building and mentoring a new community of engineers through Google Developer Group Utah, sharing cloud, DevOps, and software best practices.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Mentoring</span>
+								<span class="job-skill-tag">Cloud</span>
+							</div>
 						</div>
 					</div>
 				</div>
+
 
 
 				<div class="col-lg-6">
@@ -581,25 +631,30 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 						<div class="top-sec d-flex justify-content-between">
 							<div class="top-left">
 								<h4>DevOps Engineer Mentor</h4>
-								<p>Google Developer Program, Utah</p>
+								<p>Nucamp, Utah &middot; Part-time</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Current">
-									<span>J</span><span>a</span><span>n</span>
+								<a href="#" class="primary-btn" data-text="May'22toOct'25">
+									<span>M</span><span>a</span><span>y</span>
 									<span>'</span><span>2</span><span>2</span>
 									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
+									<span>O</span><span>c</span><span>t</span>
+									<span>'</span><span>2</span><span>5</span>
 								</a>
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							<p class="job-desc">Mentoring new students to get skills as a DevOps Egineer & Cloud Engineer.</p>
-							<div class="job-skills"></div>
+							<p class="job-desc">Mentored students in DevOps and secure cloud practices, teaching Infrastructure as Code, CI/CD, and containerization across AWS, Azure, and GCP.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Mentoring</span>
+								<span class="job-skill-tag">CI/CD</span>
+							</div>
 						</div>
 					</div>
 				</div>
-
-
 
 				<div class="col-lg-6">
 					<div class="single-job">
@@ -609,17 +664,24 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 								<p>Celtic Bank, Utah</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Jan '20 to Present">
+								<a href="#" class="primary-btn" data-text="Dec'20toAug'21">
 									<span>D</span><span>e</span><span>c</span>
 									<span>'</span><span>2</span><span>0</span>
 									<span>t</span><span>o</span>
-									<span>A</span><span>u</span><span>g</span><span>2</span><span>1</span>
+									<span>A</span><span>u</span><span>g</span>
+									<span>'</span><span>2</span><span>1</span>
 								</a>
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							<p class="job-desc">Building new startegies to develop scenarios for automation within web apps and salesforce.</p>
-							<div class="job-skills"></div>
+							<p class="job-desc">Built new strategies and automation scenarios for internal web apps and Salesforce workflows.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Automation</span>
+								<span class="job-skill-tag">Salesforce</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -628,46 +690,29 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 					<div class="single-job">
 						<div class="top-sec d-flex justify-content-between">
 							<div class="top-left">
-								<h4>UX Designer</h4>
-								<p>Cofffee.io, Utah</p>
+								<h4>Technical Support Engineer</h4>
+								<p>DigiCert, Utah</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Jan '20 to Mar '21">
-									<span>J</span><span>a</span><span>n</span>
+								<a href="#" class="primary-btn" data-text="May'20toMay'22">
+									<span>M</span><span>a</span><span>y</span>
 									<span>'</span><span>2</span><span>0</span>
 									<span>t</span><span>o</span>
-									<span>M</span><span>a</span><span>r</span>
-									<span>'</span><span>2</span><span>1</span>
-								</a>
-							</div>
-						</div>
-						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							<p class="job-desc">Solely Responsible for designing and implementing solutions for building new Websites, Data Analysis, and Marketing Tools.</p>
-							<div class="job-skills"></div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Technical Support Eng.</h4>
-								<p>Digicert, Utah</p>
-							</div>
-							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="May '20 to Mar '21">
 									<span>M</span><span>a</span><span>y</span>
-									<span>'</span><span>2</span><span>20</span>
-									<span>t</span><span>o</span>
-									<span>M</span><span>a</span><span>r</span>
-									<span>'</span><span>2</span><span>1</span>
+									<span>'</span><span>2</span><span>2</span>
 								</a>
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-							<p class="job-desc">Helping end-users to understand the importance of Cybersecurity terminology and to help them to understand why is important to have CA, SSL, and some other ways to keep secure their Data.</p>
-							<div class="job-skills"></div>
+							<p class="job-desc">Guided enterprise customers through certificate and key deployment across Linux, macOS, and Windows, and ran manual and automated testing across CertCentral and DigiCert tooling.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Security</span>
+								<span class="job-skill-tag">TLS/SSL</span>
+								<span class="job-skill-tag">PKI</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -676,21 +721,28 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 					<div class="single-job">
 						<div class="top-sec d-flex justify-content-between">
 							<div class="top-left">
-								<h4>UX Developer Intern</h4>
+								<h4>Software Engineer</h4>
 								<p>Utah Valley University, Utah</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Jan '19 to Apr '20">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
+								<a href="#" class="primary-btn" data-text="Jan'19toMay'20">
+									<span>J</span><span>a</span><span>n</span>
+									<span>'</span><span>1</span><span>9</span>
 									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
+									<span>M</span><span>a</span><span>y</span>
+									<span>'</span><span>2</span><span>0</span>
 								</a>
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
-							<p class="job-desc">I lead a team to maintain the internal style guide & implement new design patterns on web & mobile. Also, I'm currently designing new templates that will help the department to promote their future events.</p>
-							<div class="job-skills"></div>
+							<p class="job-desc">Developed APIs integrating multiple platforms to streamline internal resources, and supported QA automation to identify vulnerabilities and design effective fixes.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">API Development</span>
+								<span class="job-skill-tag">Python</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -699,21 +751,28 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 					<div class="single-job">
 						<div class="top-sec d-flex justify-content-between">
 							<div class="top-left">
-								<h4>Software QA Engineer</h4>
-								<p>SuperLumin, Utah</p>
+								<h4>Technical Support Engineer</h4>
+								<p>Instructure, Utah</p>
 							</div>
 							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Nov '19 to Apr '20">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
+								<a href="#" class="primary-btn" data-text="Nov'17toJan'19">
+									<span>N</span><span>o</span><span>v</span>
+									<span>'</span><span>1</span><span>7</span>
 									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
+									<span>J</span><span>a</span><span>n</span>
+									<span>'</span><span>1</span><span>9</span>
 								</a>
 							</div>
 						</div>
 						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-							<p class="job-desc">I develop scripts, execute, and maintain automation framework using Python, Selenium WebDriver. In charge of Building &amp; Maintaining my testing machines to make sure I have test scenarios in multiple platforms like Windows, Mac OS &amp; Linux environments.</p>
-							<div class="job-skills"></div>
+							<p class="job-desc">Supported instructors, administrators, and students troubleshooting the Canvas LMS, and built internal automation with Python and Selenium to reduce resolution time.</p>
+							<div class="job-skills">
+								<span class="job-skill-tag">Azure</span>
+								<span class="job-skill-tag">Kubernetes</span>
+								<span class="job-skill-tag">DevOps</span>
+								<span class="job-skill-tag">Python</span>
+								<span class="job-skill-tag">Selenium</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -730,42 +789,62 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 				<div class="col-lg-12">
 					<div class="section-title">
 						<h2>Freelance Work</h2>
-						<p>Now, I can assists you with UX Design, Automation, IT & Security, Mobile Apps, and Web Apps. Please feel free to reach me out at anytime, and I would be more than happy to help!</p>
+						<div class="freelance-badge">
+							<span class="availability-dot"></span>
+							Open for Contract & Freelance Work
+						</div>
+						<p>I design, build, and secure digital products end-to-end — UX/UI design, full-stack development, and cloud security including DevSecOps and penetration testing. Security is where I focus most, but I cover the full stack from design to deployment. Available for contract work, freelance projects, or ongoing engagements at any time — reach out and let's talk.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-4 col-md-6">
 					<div class="single-service wow fadeInUp" data-wow-duration="1s">
-						<span class="lnr lnr-screen"></span>
+						<span class="lnr lnr-magic-wand"></span>
 						<h4>
-							<span>Web</span> Development
+							<span>UX/UI</span> Design
 						</h4>
-						<p> I can help you to design the website of your dreams & willing to help with new ideas for a new path. </p>
+						<p>I design intuitive, user-centered interfaces and experiences for web and mobile products.</p>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-4 col-md-6">
 					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+						<span class="lnr lnr-screen"></span>
+						<h4><span>Web & App</span> Development
+						</h4>
+						<p>I build responsive websites and cross-platform apps for Android, iOS, and the web, from idea to launch.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
 						<span class="lnr lnr-laptop-phone"></span>
 						<h4><span>Software</span> Automation
 						</h4>
-						<p>I can help you to automate your day to day life by using code to make sure you save money and time.</p>
+						<p>I automate repetitive workflows and day-to-day tasks with code to save you time and money.</p>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-						<span class="lnr lnr-database"></span>
-						<h4><span>App</span> Development
-						</h4>
-						<p>I can help you to architecture and design your new app for the most popular platforms like Android & iOS.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-4 col-md-6">
 					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
 						<span class="lnr lnr-chart-bars"></span>
-						<h4><span>DevOps</span> & Site Reliability
+						<h4><span>DevOps</span> & Cloud
 						</h4>
-						<p>I can help you to build and manage your Cloud Services to mantain your current code secure and up-to-date. </p>
+						<p>I build and manage secure, scalable cloud infrastructure — CI/CD, Kubernetes, and Infrastructure as Code.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-service single-service-featured wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
+						<span class="lnr lnr-lock"></span>
+						<h4><span>Security</span> & Penetration Testing
+						</h4>
+						<p>I secure your applications and cloud environments — DevSecOps, IAM, threat detection, and penetration testing to keep you safe.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+						<span class="lnr lnr-briefcase"></span>
+						<h4><span>Contract &</span> Freelance
+						</h4>
+						<p>Open anytime for short projects, freelance work, or ongoing contract engagements. Let's talk.</p>
 					</div>
 				</div>
 			</div>
@@ -891,10 +970,8 @@ I build systems that are secure by default, automated end-to-end, and resilient 
 							<h4>Follow Me</h4>
 						</div>
 						<div class="footer-social">
-							<a href="https://www.facebook.com/thelastmedia"><i class="fa fa-facebook"></i></a>
-							<a href="https://twitter.com/hvaandres14"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.instagram.com/hvaandres"><i class="fa fa-instagram"></i></a>
 							<a href="https://www.youtube.com/channel/UCgWt5jQo5OLyMdlR0FbSmEQ"><i class="fa fa-youtube"></i></a>
-							<a href="https://www.behance.net/aharo"><i class="fa fa-behance"></i></a>
 							<a href="https://medium.com/@ithvaandres"><i class="fa fa-medium"></i></a>
 							<a href="https://www.linkedin.com/in/hvaandres/"><i class="fa fa-linkedin"></i></a>
 							<a href="https://github.com/hvaandres"><i class="fa fa-github"></i></a>
